@@ -1,3 +1,4 @@
+import csv
 import os
 
 
@@ -10,10 +11,26 @@ def read_data(file_name):
     """
     cwd_path = os.getcwd()
     file_path = os.path.join(cwd_path, file_name)
-
+    with open(file_path, "r") as csv_file:
+        reader = csv.DictReader(csv_file)
+        data = {}
+        for row in reader:
+            for header,value in row.items():
+                if header not in data:
+                    data[header] = [int(value)]
+                else:
+                    data[header].append(int(value))
+    return data
+def selection_sort(seznam):
+    minimum = seznam[0]
+    for i in range(seznam[1]):
+        if seznam[i]<seznam[0]:
+            seznam
 
 def main():
-    pass
+    my_data = read_data("numbers.csv")
+    print(my_data["series_3"])
+
 
 
 if __name__ == '__main__':
