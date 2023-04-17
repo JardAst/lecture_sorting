@@ -42,11 +42,11 @@ def bubble_sort(seznam):
                 temp = seznam[j]
                 seznam[j] = seznam[j + 1]
                 seznam[j + 1] = temp
-
+    return seznam
 
 def insertion_sort(seznam3):
-
-    for i in range(1:len(seznam3)):
+    x = len(seznam3)
+    for i in range(1, x ):
         first = seznam3[i - 1]
 
         while i>= 0 and first < seznam3[i]:
@@ -54,9 +54,10 @@ def insertion_sort(seznam3):
             seznam3[i + 1] = seznam3[i]
             i = i - 1
 
-           
+
         seznam3[i + 1] = first
 
+    return seznam3
 
 
 
@@ -64,7 +65,7 @@ def insertion_sort(seznam3):
 def main():
     my_data = read_data("numbers.csv")
     print(my_data["series_3"])
-    print(bubble_sort()
+    print(bubble_sort(my_data["series_3"]))
 
 
 
