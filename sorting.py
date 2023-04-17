@@ -21,15 +21,11 @@ def read_data(file_name):
                 else:
                     data[header].append(int(value))
     return data
-def selection_sort(seznam):
-    minimum = seznam[0]
-    for i in range(seznam[1]):
-        if seznam[i]<seznam[0]:
-            seznam
-
-def main():
-    my_data = read_data("numbers.csv")
-    print(my_data["series_3"])
+def selection_sort(seznam0):
+    minimum = seznam0[0]
+    for i in range(seznam0[1]):
+        if seznam[i]<seznam0[0]:
+            seznam0
 
 def bubble_sort(seznam):
     # loop to access each array element
@@ -46,6 +42,31 @@ def bubble_sort(seznam):
                 temp = seznam[j]
                 seznam[j] = seznam[j + 1]
                 seznam[j + 1] = temp
+
+
+def insertion_sort(seznam3):
+
+    for i in range(1:len(seznam3)):
+        first = seznam3[i - 1]
+
+        while i>= 0 and first < seznam3[i]:
+
+            seznam3[i + 1] = seznam3[i]
+            i = i - 1
+
+           
+        seznam3[i + 1] = first
+
+
+
+
+
+def main():
+    my_data = read_data("numbers.csv")
+    print(my_data["series_3"])
+    print(bubble_sort()
+
+
 
 if __name__ == '__main__':
     main()
