@@ -31,7 +31,21 @@ def main():
     my_data = read_data("numbers.csv")
     print(my_data["series_3"])
 
+def bubble_sort(seznam):
+    # loop to access each array element
+    for i in range(len(seznam)):
 
+        # loop to compare array elements
+        for j in range(0, len(seznam) - i - 1):
+
+            # compare two adjacent elements
+            # change > to < to sort in descending order
+            if seznam[j] > seznam[j + 1]:
+                # swapping elements if elements
+                # are not in the intended order
+                temp = seznam[j]
+                seznam[j] = seznam[j + 1]
+                seznam[j + 1] = temp
 
 if __name__ == '__main__':
     main()
